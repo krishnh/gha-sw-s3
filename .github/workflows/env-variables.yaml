@@ -10,4 +10,4 @@ jobs:
     - name: use of env variable
       env:
         App_data: "Prod"
-       run: echo "we use $App_data"
+      run: echo "we use $App_data"
