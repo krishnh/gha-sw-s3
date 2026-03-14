@@ -1,12 +1,12 @@
 name: input-demo
 on: 
- workflow_dispatch
+ workflow_dispatch:
   inputs:
    environment:
     description: name of environement
     required: true
     default: dev
-    choice:
+    options:
      - dev
      - test
      - prod
