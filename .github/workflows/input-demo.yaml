@@ -20,3 +20,11 @@ jobs:
   steps:
   - name: provide details
     run: echo "deploying with ${{ inputs.artifact_tag }} to ${{ inputs.environment }}"
+ context-demo:
+  runs-on: ubuntu-latest
+  steps:
+  - name: use context variables
+    run: |
+     echo "This workflow is triggrered by ${{ github.actor }}
+     echo "This workflow is triggrered by ${{ github.repository }}
+    
