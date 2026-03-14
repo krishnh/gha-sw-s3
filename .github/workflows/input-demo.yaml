@@ -1,0 +1,21 @@
+name: input-demo
+on: workflow_dispatch
+ inputs:
+  environement:
+   description: name of environement
+   required: true
+   default: dev
+   choice:
+    - dev
+    - test
+    - prod
+  artifact_tag:
+   description: name of artifact
+   required: true
+   
+job:
+ inputs-demo:
+ runs-on: ubuntu-latest
+ steps:
+  - name: provide details
+    runs: echo "deploying with {{ inputs.artifact_tag }} to {{ inputs.environment }} 
