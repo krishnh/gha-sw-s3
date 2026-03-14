@@ -19,4 +19,4 @@ jobs:
   runs-on: ubuntu-latest
   steps:
   - name: provide details
-    runs: echo "deploying with ${{ inputs.artifact_tag }} to ${{ inputs.environment }}"
+    run: echo "deploying with ${{ inputs.artifact_tag }} to ${{ inputs.environment }}"
