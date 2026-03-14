@@ -5,7 +5,6 @@ env:
 
 jobs:
  build:
-  
   runs_on: ubuntu-latest
   steps:
     - name: use of env variable
