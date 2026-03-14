@@ -3,7 +3,7 @@ on:
  workflow_dispatch:
   inputs:
    environment:
-    description: name of environement
+    description: name of environment
     required: true
     default: dev
     options:
