@@ -1,7 +1,7 @@
 name: env-variable-demo
 on: workflow_dispatch
 env:
- App_data: "DEV"
+ App_data: "TEST"
 
 jobs:
  build:
