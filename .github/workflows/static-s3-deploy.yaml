@@ -2,6 +2,7 @@ name: s3 deployment
 on: push
 jobs:
  deploy:
+  runs-on: ubuntu-latest
   steps:
    - name: checkout the code
      uses: actions/checkout@v4
