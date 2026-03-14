@@ -16,4 +16,4 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - name: This is a deploy job
-     run: echo "We would be deployig this with version ${{ needs.build.outputs.deploy_output }}
+     run: echo "We would be deployig this with version ${{ needs.build.outputs.deploy_output }}"
