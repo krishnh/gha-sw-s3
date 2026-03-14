@@ -7,7 +7,7 @@ jobs:
  build:
   runs-on: ubuntu-latest
   steps:
-      - name: use of env variable
+    - name: use of env variable
       env:
-      App_date: "Prod"
-      run: echo "we use $App_data"
+        App_date: "Prod"
+       run: echo "we use $App_data"
