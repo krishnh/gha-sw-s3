@@ -8,4 +8,4 @@ jobs:
   runs-on: ubuntu-latest
   steps:
     - name: use of env variable
-      run: "we use $App_data"
+      run: echo "we use $App_data"
