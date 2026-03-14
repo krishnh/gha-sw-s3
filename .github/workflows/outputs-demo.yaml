@@ -8,5 +8,5 @@ jobs:
      id: XX123
      run: echo "version=1.0.1" >> $GITHUB_OUTPUT
    - name: step two
-     run: echo "This program version is: ${{ steps.XX123.outputs.version}}"
+     run: echo "This program version is: ${{ steps.XX123.outputs.version }}"
      
