@@ -28,15 +28,15 @@ jobs:
        run: echo "Deploying the code in PROD environment"     
 
   success-notify:
-  needs: ['quiality-checks','dev_deploy','prod_deploy']
-  if: always() && !failure()
+    needs: ['quiality-checks','dev_deploy','prod_deploy']
+    if: always() && !failure()
     runs-on: ubuntu-latest
     steps:
      - name: send the success email 
        run: echo "Success email send to the team"
   failure-notify:
-  needs: ['quiality-checks','dev_deploy','prod_deploy']
-  if: failure()
+    needs: ['quiality-checks','dev_deploy','prod_deploy']
+    if: failure()
     runs-on: ubuntu-latest
     steps:
      - name: send the success email 
