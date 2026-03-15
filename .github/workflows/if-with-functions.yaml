@@ -1,0 +1,43 @@
+name: if-with-functions
+on:
+  push:
+    branches:
+     - main
+     - develop
+     - feature/**
+jobs:
+  quiality-checks:
+    if: startsWith(github.ref_name,'feature') && github.event_name = 'push'
+    runs-on: ubuntu-latest
+    steps:
+     - name: perform quality checks 
+       run: echo "perform quality check on code"
+
+  dev_deploy:
+    if: github.ref_name =='develop' && github.event_name = 'push'
+    runs-on: ubuntu-latest
+    steps:
+     - name: DEV Deploy
+       run: echo "Deploying the code in dev environment"
+
+  prod_deploy:
+    if: github.ref_name =='main' && github.event_name = 'push'
+    runs-on: ubuntu-latest
+    steps:
+     - name: DEV Deploy
+       run: echo "Deploying the code in PROD environment"     
+
+  success-notify:
+  needs: ['quiality-checks','dev_deploy','prod_deploy']
+  if: always() && !failure()
+    runs-on: ubuntu-latest
+    steps:
+     - name: send the success email 
+       run: echo "Success email send to the team"
+  failure-notify:
+  needs: ['quiality-checks','dev_deploy','prod_deploy']
+  if: failure()
+    runs-on: ubuntu-latest
+    steps:
+     - name: send the success email 
+       run: echo "Failure email send to the team "     
