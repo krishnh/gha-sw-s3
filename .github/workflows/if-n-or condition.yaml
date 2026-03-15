@@ -5,7 +5,7 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - name: This will use the if and or conditions 
-     if: github.actor == 'Hemant' || github.actor == 'krishnh'
+     if: github.actor == 'Hemant' || github.actor == 'krishn'
      id: step1
      run: echo "version=1.0.1" >> $GITHUB_OUTPUT
    - name: step two
