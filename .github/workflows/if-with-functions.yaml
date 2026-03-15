@@ -5,6 +5,8 @@ on:
      - main
      - develop
      - feature/**
+env:
+ App_data: "TEST"     
 jobs:
   quiality-checks:
     if: startsWith(github.ref_name,'feature') && github.event_name =='push'
