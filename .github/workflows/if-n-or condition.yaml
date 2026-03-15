@@ -1,0 +1,12 @@
+name: build-deploy.yaml
+on: push
+jobs:
+ build:
+  runs-on: ubuntu-latest
+  steps:
+   - name: This will use the if and or conditions 
+     if: github.actor == 'Hemant' || github.actor == 'krishnh'
+     id: step1
+     run: echo "version=1.0.1" >> $GITHUB_OUTPUT
+   - name: step two
+     run: echo "This program version is ${{ steps.step1.outputs.version }}"
